@@ -1,2 +1,19 @@
 # Anomaly-Detection-APS-failures-in-Scania-trucks
-Predict failure of a component in the APS system which generates pressurized air that is utilized in various functions in a truck, such as braking and gear changes. The positive class represents a specific component failure and the negative class represents failures not related to the APS. In this dataset, cost for wrongly classified positive class and cost for wrongly classified negative class is given and we need to optimize this cost while prediction.  Five different kinds of models were built: Random Forest, k-NN, Gaussian, Logistic regression and SVM. Each used different data manipulation techniques like synthetic oversampling, replacing values with mean or median etc. and feature reduction techniques like PCA, Z-score, etc. The models were given weights according to the cost that was obtained and the later a decision was made according to them.
+We are trying to model a prediction system for detecting a component failure in the
+Air Pressure System (APS) in the heavy Scania trucks. The prediction will tell us if there is an
+imminent failure in the heavy trucks. The data were thus collected from the APS system that is
+used in these day-to-day trucks. The APS, in general, is a system which generates pressurized air
+to use in different component functions in the trucks such as braking, gears, suspension, etc. A
+positive class is given to component failure that belongs to the APS system and a negative class
+is given to component failure related to anything else. Other than just predicting the failure of the
+component, we are also trying to optimize the cost of a failure. A cost of 10 is given to a correct
+prediction i.e. predicting a failure of APS component and a cost of 500 is given to a false
+negative i.e. to failure that was not predicted by our model. Thus, penalty minimizing is also one
+of our main goals. The problem can be said to be a classification problem. We have used 5
+different models, Logistic regression, Support Vector Machine, Random forest, Gaussian model,
+Random model and K-Nearest Neighbour. All of these models use a different type of data
+cleaning techniques and feature selection. In the end, according to the cost predicted by each
+model, a weight is assigned to each one of them and a final decision is taken based on this
+weighted polling. Our experiments show that the best classifier is the Random Forest with the
+cost of around 10,000. Also, the accuracy of all the other models came out to be approximately
+95%.
